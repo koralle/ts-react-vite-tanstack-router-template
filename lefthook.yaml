@@ -1,0 +1,16 @@
+pre-commit:
+  parallel: true
+  commands:
+    format-check:
+      glob: '*.{js,ts,jsx,tsx,mjs,mts,cjs,cts,css,html}'
+      run: pnpm prettier {staged_files} --check
+
+    typecheck-src:
+      glob: '*.{js,ts,jsx,tsx,cjs,mjs,mts,cts}'
+      root: "src"
+      run: pnpm tsc -p tsconfig.app.json
+
+    typecheck-storybook:
+      glob: '*.{js,ts,jsx,tsx,cjs,mjs,mts,cts}'
+      root: ".storybook"
+      run: pnpm tsc -p tsconfig.json
