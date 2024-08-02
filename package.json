@@ -75,10 +75,5 @@
     "pnpm": ">=9.4.0",
     "npm": "please use pnpm!",
     "yarn": "please use pnpm!"
-  },
-  "eslintConfig": {
-    "extends": [
-      "plugin:storybook/recommended"
-    ]
   }
 }
