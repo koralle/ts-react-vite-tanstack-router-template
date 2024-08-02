@@ -11,7 +11,7 @@
     "lint": "eslint . --max-warnings 0 --cache",
     "fmt": "prettier ./src ./stories ./.storybook --write",
     "fmt:check": "prettier ./src ./stories ./.storybook --check",
-    "check": "concurrently 'pnpm run fmt:check' 'pnpm run typecheck'",
+    "check": "concurrently 'pnpm run typecheck' 'pnpm run fmt:check' 'pnpm run lint'",
     "typecheck": "tsc --noEmit",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
