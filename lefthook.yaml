@@ -7,10 +7,10 @@ pre-commit:
 
     typecheck-src:
       glob: '*.{js,ts,jsx,tsx,cjs,mjs,mts,cts}'
-      root: "src"
+      root: 'src'
       run: pnpm tsc -p tsconfig.app.json
 
     typecheck-storybook:
       glob: '*.{js,ts,jsx,tsx,cjs,mjs,mts,cts}'
-      root: ".storybook"
+      root: '.storybook'
       run: pnpm tsc -p tsconfig.json
