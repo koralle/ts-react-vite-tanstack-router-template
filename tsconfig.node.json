@@ -7,5 +7,5 @@
     "allowJs": true,
     "noEmit": true
   },
-  "include": ["vite.config.mts"]
+  "include": ["vite.config.mts", "eslint.config.mjs"]
 }
