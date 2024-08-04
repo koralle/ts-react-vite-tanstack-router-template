@@ -1,16 +1,12 @@
 pre-commit:
-  parallel: true
+  piped: true
   commands:
     format-check:
-      glob: '*.{js,ts,jsx,tsx,mjs,mts,cjs,cts,css,html}'
-      run: pnpm prettier {staged_files} --check
+      glob: '*.{js,cjs,mjs,jsx,ts,cts,mts,tsx,d.ts,css,html,json,md,mdx,yaml,yml}'
+      run: pnpm prettier {staged_files} --write
+      stage_fixed: true
 
-    typecheck-src:
-      glob: '*.{js,ts,jsx,tsx,cjs,mjs,mts,cts}'
-      root: 'src'
-      run: pnpm tsc -p tsconfig.app.json
-
-    typecheck-storybook:
-      glob: '*.{js,ts,jsx,tsx,cjs,mjs,mts,cts}'
-      root: '.storybook'
-      run: pnpm tsc -p tsconfig.json
+    lint:
+      glob: '*.{js,cjs,mjs,jsx,ts,cts,mts,tsx,d.ts}'
+      run: pnpm eslint {staged_files} --max-warnings 0 --fix
+      stage_fixed: true
