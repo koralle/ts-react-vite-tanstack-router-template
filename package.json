@@ -41,7 +41,7 @@
     "@tsconfig/strictest": "^2.0.5",
     "@types/eslint__js": "^8.42.3",
     "@types/jsdom": "^21.1.7",
-    "@types/node": "^20.14.10",
+    "@types/node": "^22.13.8",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.15.0",
